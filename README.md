@@ -314,4 +314,92 @@ Visto? Appena il programma esce dal ciclo, esso esegue le istruzioni che compaio
   >**NOTA BENE | incremento di una variabile**
  >	Come puoi notare, l'ultima istruzione all'interno del ciclo è `a++` .
  >	 `a++` è l'equivalente di scrivere  `a = a+1`  
- 
+
+
+## Ciclo Do - While
+Il ciclo do - While è un'evoluzione del ciclo While. L'unica cosa che cambia da quest'ultimo infatti, è che il blocco di istruzioni da eseguire viene eseguito una volta, poi viene verificata la condizione e allora verrà eseguito di nuovo fino a quando la condizione non diventerà falsa.
+
+> _esegui [blocco di istruzioni]
+>fino a quando questo è vero_ [condizione]
+   _esegui [blocco di istruzioni]
+
+Vediamo quindi come inserire nel codice un ciclo while e la sua sintassi:
+
+``` cpp
+do {  
+ //blocco di codice 
+ }  
+while (condizione);
+```
+
+Facciamo un esempio pratico:
+
+``` cpp
+int i = 0;  
+do {  
+  cout << i << "\n";  
+  i++;  
+}  
+while (i < 5);
+```
+
+output:
+
+``` shell
+0
+1
+2
+3
+4
+```
+
+
+
+## Ciclo For
+Il ciclo for è un ciclo più complesso del ciclo while, che permette di ripetere un blocco di istruzioni un determinato numero di volte. Come per il While, per eseguire il blocco di codice dovrà essere soddisfatta una condizione.
+>_fino a quando questo è vero_ [condizione]
+   _esegui [e cosa succede]
+
+Vediamo quindi come inserire nel codice un ciclo for e la sua sintassi:
+
+``` cpp
+for(<inizializzazione>; <condizione>; <espressione_iterativa>){
+	istruzione1;
+	istruzione2;
+	ecc;
+}
+```
+
+Come possiamo notare, tra le parentesi non è presente la sola condizione che dev'essere soddisfatta, ma anche un'istruzione di inizializzazione e un'espressione iterativa.
+Queste sono utili per utilizzare il ciclo for con Vettori, matrici, e altre parti del c++ che non abbiamo ancora trattato.
+Ci limiteremo quindi ad inserire nel parametro di inizializzazione, la dichiarazione di una variabile contatore, e nell'espressione iterativa, l'incremento della suddetta variabile. Sia chiaro che l'espressione iterativa viene eseguita ad ogni ciclo, quindi la variabile verrà incrementata ad ogni giro.
+
+Facciamo un esempio pratico:
+
+``` cpp
+int acc = 0;
+for (int i = 0; i < 10; i ++){
+    cout << "Questo è il giro numero" << i  << endl;
+    acc += i;
+}
+```
+
+output:
+
+``` shell
+Questo è il giro numero0
+Questo è il giro numero1
+Questo è il giro numero2
+Questo è il giro numero3
+Questo è il giro numero4
+Questo è il giro numero5
+Questo è il giro numero6
+Questo è il giro numero7
+Questo è il giro numero8
+Questo è il giro numero9
+
+```
+
+Il ciclo stampa a schermo 10 volte la scritta, scrivendo alla fine il numero del giro.
+> Chiariamo che questo è un uso estremamente riduttivo del ciclo for, tanto che questo risultato si potrebbe ottenere anche con un ciclo while.
+> Ci limitiamo però a questi esempi, dato che un uso intensivo del ciclo for verrà fatto più avanti.
