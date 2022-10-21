@@ -1,4 +1,5 @@
 # Basi di c++
+di Matteo Andreuzza
 ## Variabili e costanti
 Per contenere dei valori utilizziamo variabili e costanti:
 - variabili per contenere un valore che **può variare**
