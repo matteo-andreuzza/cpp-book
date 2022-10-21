@@ -404,3 +404,62 @@ Questo è il giro numero9
 Il ciclo stampa a schermo 10 volte la scritta, scrivendo alla fine il numero del giro.
 > Chiariamo che questo è un uso estremamente riduttivo del ciclo for, tanto che questo risultato si potrebbe ottenere anche con un ciclo while.
 > Ci limitiamo però a questi esempi, dato che un uso intensivo del ciclo for verrà fatto più avanti.
+
+## Istruzioni utili nei cicli
+
+### istruzione break
+l'istruzione break serve a fermare un ciclo in un determinato momento. Questo può essere utile per terminare il ciclo quando una condizione è soddisfatta.
+Esempio:
+```cpp
+    for (int i = 1; i < 10; i++)
+    {
+        if (i == 4) {
+            break;
+        }
+        cout << i << '\n';
+    }
+```
+output:
+```shell
+1
+2
+3
+```
+il ciclo si ferma quando ```i``` diventa 4
+
+### Istruzione continue
+L'istruzione ```continue``` interrompe l'iterazione del ciclo, facendolo ripartire. Più specificatamente:
+
+> L'istruzione `continue` ha come effetto l'interruzione dell'iterazione corrente. Il controllo di flusso rimane confinato all'interno del ciclo, ma viene reindirizzato all'iterazione successiva in conseguenza di una circostanza inattesa che invalida o rende superflua l'esecuzione di tale iterazione.
+
+esempio:
+```cpp
+int i = 0;
+while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  cout << i << "\n";
+  i++;
+}
+```
+
+output
+```shell
+0
+1
+2
+3  # <= manca il 4
+5
+6
+7
+8
+9
+```
+Possiamo notare che quando ```i``` è uguale a 4, la corrente iterazione del ciclo viene interrotta.
+
+> Nota bene:
+> Come vedi nell'output c'è un `#` prima della freccia che indica l'assenza del 4. Questo **NON** fa parte dell'output. L'indicatore `#` è un commento (come `//` in c++) nel linguaggio shell.
+
+
