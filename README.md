@@ -516,6 +516,9 @@ Notare come il ciclo for risulta molto utile in questi casi, dato che ci permett
 La sintassi vista qui sopra è utile in diversi casi. 
 
 
+
+**Il seguente testo NON riguarda il programma di SECONDA superiore**
+
 # Stringhe in c++
 
 # matrici di stringhe
