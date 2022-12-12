@@ -463,3 +463,100 @@ Possiamo notare che quando ```i``` è uguale a 4, la corrente iterazione del cic
 > Come vedi nell'output c'è un `#` prima della freccia che indica l'assenza del 4. Questo **NON** fa parte dell'output. L'indicatore `#` è un commento (come `//` in c++) nel linguaggio shell.
 
 
+# Arrays in C++
+In c++, come in ogni linguaggio di programmazione che li supporta, gli arrays servono ad immagazzinare più elementi all'interno di una variabile. 
+Ci sono due tipi di arrays, i vettori e le matrici. Vediamo ora i Vettori.
+## Vettori
+Detti anche array monodimensionali, sono caratterizzati da:
+- Il tipo di elementi che deve contenere
+- La lunghezza dell'array
+- Gli elementi che contiene
+- Gli indici degli elementi
+Questa rappresentazione ci aiuta a capire la struttura dell'array:
+![[Array1.jpg]]
+Un array è costituito da delle "caselle" immaginarie. Queste caselle devono essere tante quante la lunghezza dell'array (nell'immagine: Array lenght). Ad ogni "casella" è assegnato un numero che la rappresenta, questo numero è chiamato indice.
+> **Nota bene**
+> Gli indici delle "caselle" partono da 0. Questo significa che la prima casella avrà indice 0, la seconda 1 e così via. 
+
+Le caselle possono essere riempite con degli elementi, a patto che questi elementi siano del tipo dell'array, ma adesso vedremo meglio.
+
+### L'array nel codice c++
+Vediamo ora come usare gli array nei nostri programmi c++:
+Come per le variabili, anche gli arrays vanno inizializzati:
+La struttura per inizializzare un vettore è la seguente:
+```cpp
+tipo nome[lunghezza] = contenuto;
+```
+Per inizializzare un vettore di 5 elementi contenente i primi 5 numeri naturali, scriverò:
+```cpp
+int numeri[5] = {1, 2, 3, 4, 5}
+```
+>Nota bene:
+>in un array gli elementi sono separati da una virgola e contenuti dentro parentesi graffe.
+
+#### Usare gli arrays:
+Possiamo utilizzare i vettori in svariati modi. Per ricavare un valore in una determinata posizione in un vettore usiamo la sintassi:
+```cpp
+int numeri[5] = {1, 2, 3, 4, 5};
+cout << numeri[1];
+```
+output:
+```shell
+2
+```
+
+vediamo per esempio come stampare tutti i valori di un vettore:
+```cpp
+int numeri[5] = {1, 2, 3, 4, 5};
+for(int i = 0; i<5; i++){
+	cout << numeri[i] << endl;
+}
+```
+Notare come il ciclo for risulta molto utile in questi casi, dato che ci permette di eseguire determinate operazioni su un vettore un determinato numero di volte. Sapendo la dimensione del vettore (che dev'essere definita) utilizzare tutti gli elementi.
+La sintassi vista qui sopra è utile in diversi casi. 
+
+
+# Stringhe in c++
+
+# matrici di stringhe
+
+In C++, una matrice è un tipo di dato che può contenere più valori di uno stesso tipo. Una matrice di stringhe può quindi essere utilizzata per memorizzare una serie di stringhe. Per dichiarare una matrice di stringhe, dovresti scrivere qualcosa del genere:
+
+``` cpp
+string nome_matrice[numero_di_righe][numero_di_colonne]; 
+``` 
+
+Dove `numero_di_righe` e `numero_di_colonne` specificano rispettivamente il numero di righe e il numero di colonne della matrice. Ad esempio, la seguente istruzione dichiara una matrice di stringhe di 3 righe e 4 colonne:
+
+```cpp
+string matrice_stringhe[3][4];
+```
+
+Per assegnare un valore a una stringa in una matrice, puoi usare la sintassi seguente:
+
+``` cpp
+nome_matrice[riga][colonna] = "valore";
+```
+
+Ad esempio, per assegnare il valore "ciao" alla prima riga e alla seconda colonna della matrice di stringhe dichiarata in precedenza, potresti usare il seguente codice:
+
+```cpp
+matrice_stringhe[0][1] = "ciao";
+```
+
+Per stampare il contenuto di una matrice di stringhe, puoi usare un ciclo `for` per scorrere le righe e le colonne della matrice e utilizzare il seguente codice per stampare il valore di ogni cella:
+
+```cpp
+cout << nome_matrice[riga][colonna] << endl;
+```
+
+Ad esempio, il seguente codice stampa il contenuto di ogni cella della matrice di stringhe precedentemente dichiarata:
+
+``` cpp
+for (int i = 0; i < 3; i++) {     
+	for (int j = 0; j < 4; j++) {         
+		cout << matrice_stringhe[i][j] << endl;     
+	}
+}
+```
+
