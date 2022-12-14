@@ -517,11 +517,129 @@ La sintassi vista qui sopra è utile in diversi casi.
 
 
 
+
+
 **Il seguente testo NON riguarda il programma di SECONDA superiore**
 
 # Stringhe in c++
 
-# matrici di stringhe
+## Gestione delle stringhe
+In C++, puoi usare l'operatore di concatenazione `+` per concatenare due stringhe. Ad esempio:
+
+In C++, puoi usare l'operatore di concatenazione `+` per concatenare due stringhe. Ad esempio:
+
+```cpp
+#include <iostream> 
+#include <string>  
+int main() {   
+	std::string s1 = "ciao";   
+	std::string s2 = " mondo";    
+	std::string s3 = s1 + s2;   
+	std::cout << s3 << std::endl; // stamperà "ciao mondo"    
+	return 0; 
+}
+```
+
+Inoltre, puoi anche usare il metodo `append` per concatenare una stringa ad una stringa già esistente. Ad esempio:
+
+```cpp
+#include <iostream> 
+#include <string>  
+int main() {   
+	std::string s1 = "ciao";   
+	std::string s2 = " mondo";    
+	s1.append(s2);   
+	std::cout << s1 << std::endl; // stamperà "ciao mondo"    
+	return 0; 
+}
+```
+
+Infine, puoi anche usare il metodo `+=` per concatenare una stringa ad una stringa già esistente. Ad esempio:
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string s1 = "ciao";
+  std::string s2 = " mondo";
+
+  s1 += s2;
+  std::cout << s1 << std::endl; // stamperà "ciao mondo"
+
+  return 0;
+}```
+
+
+```cpp
+#include <iostream> 
+#include <string>  
+int main() {   
+	std::string s1 = "ciao";   
+	std::string s2 = " mondo";    
+	std::string s3 = s1 + s2;   
+	std::cout << s3 << std::endl; // stamperà "ciao mondo"    
+	return 0; 
+	
+}
+```
+
+Inoltre, puoi anche usare il metodo `append` per concatenare una stringa ad una stringa già esistente. Ad esempio:
+
+```cpp
+#include <iostream> 
+#include <string>  
+int main() {   
+	std::string s1 = "ciao";   
+	std::string s2 = " mondo";    
+	s1.append(s2);   
+	std::cout << s1 << std::endl; // stamperà "ciao mondo"    
+	return 0; 
+}
+```
+
+Infine, puoi anche usare il metodo `+=` per concatenare una stringa ad una stringa già esistente. Ad esempio:
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+  std::string s1 = "ciao";
+  std::string s2 = " mondo";
+
+  s1 += s2;
+  std::cout << s1 << std::endl; // stamperà "ciao mondo"
+
+  return 0;
+}
+```
+
+## inserimento di caratteri nelle stringhe
+Per inserire un carattere tra un carattere e l'altro di una stringa in c++, puoi utilizzare la funzione `insert` della classe `string`. La sintassi per utilizzare questa funzione è la seguente:
+
+`stringa.insert(posizione, carattere_da_inserire);`
+
+In questo caso, `stringa` è la stringa in cui vuoi inserire il nuovo carattere, `posizione` è la posizione in cui vuoi inserire il carattere (nota che la prima posizione di una stringa in c++ ha indice 0) e `carattere_da_inserire` è il carattere che vuoi inserire nella stringa.
+
+Ecco un esempio di come utilizzare la funzione `insert` per inserire un carattere nella stringa "ciao":
+
+```cpp
+#include <iostream> 
+#include <string>  
+using namespace std;  
+int main() {   
+	string s = "ciao";    // Inserisci una 'x' nella posizione 2 della stringa 
+	s.insert(2, "x");    
+	cout << s << endl;    
+	return 0; 
+}
+```
+
+Se esegui questo programma, dovresti vedere che viene stampata la stringa "cixao" a schermo, poiché abbiamo inserito una 'x' nella posizione 2 della stringa originale "ciao".
+
+
+## matrici di stringhe
 
 In C++, una matrice è un tipo di dato che può contenere più valori di uno stesso tipo. Una matrice di stringhe può quindi essere utilizzata per memorizzare una serie di stringhe. Per dichiarare una matrice di stringhe, dovresti scrivere qualcosa del genere:
 
