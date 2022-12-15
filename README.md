@@ -526,8 +526,6 @@ La sintassi vista qui sopra è utile in diversi casi.
 ## Gestione delle stringhe
 In C++, puoi usare l'operatore di concatenazione `+` per concatenare due stringhe. Ad esempio:
 
-In C++, puoi usare l'operatore di concatenazione `+` per concatenare due stringhe. Ad esempio:
-
 ```cpp
 #include <iostream> 
 #include <string>  
@@ -584,36 +582,6 @@ int main() {
 }
 ```
 
-Inoltre, puoi anche usare il metodo `append` per concatenare una stringa ad una stringa già esistente. Ad esempio:
-
-```cpp
-#include <iostream> 
-#include <string>  
-int main() {   
-	std::string s1 = "ciao";   
-	std::string s2 = " mondo";    
-	s1.append(s2);   
-	std::cout << s1 << std::endl; // stamperà "ciao mondo"    
-	return 0; 
-}
-```
-
-Infine, puoi anche usare il metodo `+=` per concatenare una stringa ad una stringa già esistente. Ad esempio:
-
-```cpp
-#include <iostream>
-#include <string>
-
-int main() {
-  std::string s1 = "ciao";
-  std::string s2 = " mondo";
-
-  s1 += s2;
-  std::cout << s1 << std::endl; // stamperà "ciao mondo"
-
-  return 0;
-}
-```
 
 ## inserimento di caratteri nelle stringhe
 Per inserire un carattere tra un carattere e l'altro di una stringa in c++, puoi utilizzare la funzione `insert` della classe `string`. La sintassi per utilizzare questa funzione è la seguente:
