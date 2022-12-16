@@ -515,6 +515,30 @@ for(int i = 0; i<5; i++){
 Notare come il ciclo for risulta molto utile in questi casi, dato che ci permette di eseguire determinate operazioni su un vettore un determinato numero di volte. Sapendo la dimensione del vettore (che dev'essere definita) utilizzare tutti gli elementi.
 La sintassi vista qui sopra è utile in diversi casi. 
 
+# Librerie e funzioni esterne
+In c++ possiamo utilizzare delle librerie esterne per far compiere al nostro programma determinate azioni. Ad esempio per generare numeri random, dobbiamo importare due librerie, la libreria `citime` e la libreria `cstlib`.
+Per importare le librerie si utilizza la scrittura `#import` seguito dal nome della libreria.
+Nel seguente caso utilizziamo la funzione `rand()` per generare dei numeri casuali nell'intervallo specificato.
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+    int dim = 10;
+    int a[dim];
+    srand(time(0));
+    // carica l'array con numeri casuali nell'intervallo tra 1 e 10
+    for (int i = 0; i < dim; i++)
+    {
+        a[i] = rand()%10+1;
+    }
+
+```
+
+
+
 
 
 
