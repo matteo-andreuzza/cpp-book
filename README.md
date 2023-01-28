@@ -1,5 +1,35 @@
 # Basi di c++
 di Matteo Andreuzza
+###### Indice
+- [Basi di c++](#basi-di-c--)
+  * [Variabili e costanti](#variabili-e-costanti)
+  * [Funzioni di base di iostream:](#funzioni-di-base-di-iostream-)
+  * [Operazioni matematiche:](#operazioni-matematiche-)
+  * [Funzione principale](#funzione-principale)
+- [Costrutti complessi in C++ (1)](#costrutti-complessi-in-c----1-)
+  * [Operatori di selezione](#operatori-di-selezione)
+    + [Selezione semplice](#selezione-semplice)
+    + [Selezione annidata](#selezione-annidata)
+  * [Gli operatori logici](#gli-operatori-logici)
+- [Cicli in C++](#cicli-in-c--)
+  * [Ciclo While](#ciclo-while)
+  * [Ciclo Do - While](#ciclo-do---while)
+  * [Ciclo For](#ciclo-for)
+  * [Istruzioni utili nei cicli](#istruzioni-utili-nei-cicli)
+    + [istruzione break](#istruzione-break)
+    + [Istruzione continue](#istruzione-continue)
+- [Librerie e funzioni esterne](#librerie-e-funzioni-esterne)
+- [Arrays in C++](#arrays-in-c--)
+  * [Vettori](#vettori)
+    + [L'array nel codice c++](#l-array-nel-codice-c--)
+      - [Usare gli arrays:](#usare-gli-arrays-)
+  * [Matrici](#matrici)
+- [Stringhe in c++](#stringhe-in-c--)
+  * [Gestione delle stringhe](#gestione-delle-stringhe)
+  * [inserimento di caratteri nelle stringhe](#inserimento-di-caratteri-nelle-stringhe)
+  * [matrici di stringhe](#matrici-di-stringhe)
+
+# Basi di C++
 ## Variabili e costanti
 Per contenere dei valori utilizziamo variabili e costanti:
 - variabili per contenere un valore che **può variare**
@@ -462,6 +492,28 @@ Possiamo notare che quando ```i``` è uguale a 4, la corrente iterazione del cic
 > Nota bene:
 > Come vedi nell'output c'è un `#` prima della freccia che indica l'assenza del 4. Questo **NON** fa parte dell'output. L'indicatore `#` è un commento (come `//` in c++) nel linguaggio shell.
 
+# Librerie e funzioni esterne
+In c++ possiamo utilizzare delle librerie esterne per far compiere al nostro programma determinate azioni. Ad esempio per generare numeri random, dobbiamo importare due librerie, la libreria `citime` e la libreria `cstlib`.
+Per importare le librerie si utilizza la scrittura `#import` seguito dal nome della libreria.
+Nel seguente caso utilizziamo la funzione `rand()` per generare dei numeri casuali nell'intervallo specificato.
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+    int dim = 10;
+    int a[dim];
+    srand(time(0));
+    // carica l'array con numeri casuali nell'intervallo tra 1 e 10
+    for (int i = 0; i < dim; i++)
+    {
+        a[i] = rand()%10+1;
+    }
+
+```
+
 
 # Arrays in C++
 In c++, come in ogni linguaggio di programmazione che li supporta, gli arrays servono ad immagazzinare più elementi all'interno di una variabile. 
@@ -515,32 +567,52 @@ for(int i = 0; i<5; i++){
 Notare come il ciclo for risulta molto utile in questi casi, dato che ci permette di eseguire determinate operazioni su un vettore un determinato numero di volte. Sapendo la dimensione del vettore (che dev'essere definita) utilizzare tutti gli elementi.
 La sintassi vista qui sopra è utile in diversi casi. 
 
-# Librerie e funzioni esterne
-In c++ possiamo utilizzare delle librerie esterne per far compiere al nostro programma determinate azioni. Ad esempio per generare numeri random, dobbiamo importare due librerie, la libreria `citime` e la libreria `cstlib`.
-Per importare le librerie si utilizza la scrittura `#import` seguito dal nome della libreria.
-Nel seguente caso utilizziamo la funzione `rand()` per generare dei numeri casuali nell'intervallo specificato.
-```cpp
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-using namespace std;
-
-int main(){
-    int dim = 10;
-    int a[dim];
-    srand(time(0));
-    // carica l'array con numeri casuali nell'intervallo tra 1 e 10
-    for (int i = 0; i < dim; i++)
-    {
-        a[i] = rand()%10+1;
-    }
+Un altro algoritmo utile può invertire tutti gli elementi di un array:
+``` cpp
+// inverti l'array
+for (int i = 0; i < dim / 2; i++)
+{
+int temp = b[i];
+b[i] = b[dim - i - 1];
+b[dim - i - 1] = temp;
+}
+cout << "STAMPA ARRAY GIRATO" << endl;
+// stampa l'array
+cout << "a" << endl;
+for (int i = 0; i < dim; i++)
+{
+cout << a[i] << ", ";
+}
 
 ```
 
+## Matrici
+Le matrici sono arrays bidimensionali, rappresentabili ad altissimo livello come delle tabelle.
+Come per gli arrays anche le matrici si inizializzano, con la differenza che ogni matrice contiene due indici, ovvero quello della riga e quello della colonna. Per questo si dovrà inizializzare la matrice inserendo sia il numero di righe che quello di colonne.
+Per creare una matrice 3x3 chiamata "matrix" si utilizza il seguente codice:
+`int matrix[3][3];`
+Per assegnare un valore a un elemento specifico della matrice, si può utilizzare la seguente sintassi:
 
+`matrix[i][j] = valore;`
 
+dove i e j sono gli indici della riga e della colonna dell'elemento da modificare, rispettivamente, e valore è il valore da assegnare all'elemento.
 
+Per accedere a un elemento specifico della matrice si può utilizzare la stessa sintassi:
 
+`elemento = matrix[i][j];`
+
+Inoltre, si può utilizzare un costrutto formato da due cicli for per eseguire operazioni su tutti gli elementi della matrice. Ad esempio, per stampare tutti gli elementi della matrice si può utilizzare il seguente codice:
+
+``` cpp
+for (int i = 0; i < 3; i++) {  
+	for (int j = 0; j < 3; j++) { 
+		cout << matrix[i][j] << " ";    
+	}     
+	cout << endl; 
+}
+```
+
+In questo caso, utilizziamo due cicli for annidati, uno per le righe e uno per le colonne, per accedere a tutti gli elementi della matrice e stamparli a schermo.
 
 
 **Il seguente testo NON riguarda il programma di SECONDA superiore**
