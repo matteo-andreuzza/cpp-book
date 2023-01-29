@@ -1,7 +1,7 @@
 # Basi di c++
 di Matteo Andreuzza
 ###### Indice
-- [Basi di c++](#basi-di-c--)
+- [Basi di C++](#basi-di-c--)
   * [Variabili e costanti](#variabili-e-costanti)
   * [Funzioni di base di iostream:](#funzioni-di-base-di-iostream-)
   * [Operazioni matematiche:](#operazioni-matematiche-)
@@ -44,8 +44,7 @@ int raggio = 20;
 Scrivo, in ordine : datatype, nome della variabile, contenuto.
 - **Datatype:** tipo della variabile, varia in base a ciò che contiene (char, int, float, bool, ecc...)
 - **Nome:** scelgo un nome a piacere per la variabile
-- **Contenuto:** Il contenuto della variabile deve rispettare le condizioni del datatype
-
+- **Contenuto:** Il contenuto della variabile deve rispettare le condizioni del datatype, ad esempio numeri interi per variabili `int`, numeri con virgola per variabili `float`, valori `True` o `False` per le variabili `bool`, valori di singole lettere per variabili `char`.
 **Dichiarazione di una COSTANTE:**
 
 ```cpp
