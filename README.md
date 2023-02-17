@@ -45,6 +45,10 @@ Scrivo, in ordine : datatype, nome della variabile, contenuto.
 - **Datatype:** tipo della variabile, varia in base a ciò che contiene (char, int, float, bool, ecc...)
 - **Nome:** scelgo un nome a piacere per la variabile
 - **Contenuto:** Il contenuto della variabile deve rispettare le condizioni del datatype, ad esempio numeri interi per variabili `int`, numeri con virgola per variabili `float`, valori `True` o `False` per le variabili `bool`, valori di singole lettere per variabili `char`.
+> **Nota bene:**
+>la variabile `bool` accetta SOLO valori `true` e `false`, i quali vanno inserirti rigorosamente in minuscolo. La variabile `bool` va sempre inizializzata
+
+
 **Dichiarazione di una COSTANTE:**
 
 ```cpp
@@ -612,7 +616,64 @@ for (int i = 0; i < 3; i++) {
 ```
 
 In questo caso, utilizziamo due cicli for annidati, uno per le righe e uno per le colonne, per accedere a tutti gli elementi della matrice e stamparli a schermo.
+Un esempio di programma che applica le matrici può essere il seguente:
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+/*data una matrice 4x4 di interi trova ma riga o la colonna con ma somma maggiore*/
+using namespace std;
+const int SIZE = 4;
+int main() {
+    int matrix[SIZE][SIZE];
+    srand(time(NULL));
+    // Inizializzazione casuale della matrice
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            matrix[i][j] = rand() % 10;
+        }
+    }
+    // Stampa della matrice
+    cout << "Matrice generata: " << endl;
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+    // Ricerca della riga con la somma maggiore
+    int max_row_sum = 0;
+    int max_row_index = 0;
+    for (int i = 0; i < SIZE; i++) {
+        int row_sum = 0;
+        for (int j = 0; j < SIZE; j++) {
+            row_sum += matrix[i][j];
+        }
+        if (row_sum > max_row_sum) {
+            max_row_sum = row_sum;
+            max_row_index = i;
+        }
+    }
+    // Ricerca della colonna con la somma maggiore
+    int max_col_sum = 0;
+    int max_col_index = 0;
 
+    for (int j = 0; j < SIZE; j++) {
+        int col_sum = 0;
+        for (int i = 0; i < SIZE; i++) {
+            col_sum += matrix[i][j];
+        }
+        if (col_sum > max_col_sum) {
+            max_col_sum = col_sum;
+            max_col_index = j;
+        }
+    }
+    // Stampa dei risultati
+    cout << "La riga con la somma maggiore è la " << max_row_index + 1<< " (somma = " << max_row_sum << ")" << endl;
+    cout << "La colonna con la somma maggiore è la " << max_col_index + 1 << " (somma = " << max_col_sum << ")" << endl;
+    return 0;
+}
+```
 
 **Il seguente testo NON riguarda il programma di SECONDA superiore**
 
