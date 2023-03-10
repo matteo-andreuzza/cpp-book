@@ -675,6 +675,47 @@ int main() {
 }
 ```
 
+
+# Funzioni in c++
+Le funzioni, nella programmazione in generale, sono dei pezzi di codice che servono a ripetere dei blocchi di codice più volte, senza però riscriverli.
+Una funzione si articola in 2 parti principali:
+- **Definizione**: La funzione va definita, ovvero bisogna specificare che essa esiste. 
+- **Invocazione o chiamata**: quando si va ad utilizzare effettivamente la funzione.
+Andiamo ora a definire una funzione:
+- La prima cosa da fare sarà scrivere la **firma** della funzione, ovvero la prima riga del codice di questa, che ci fornisce informazioni importanti. Andiamo a specificare il datatype della funzione, il suo nome e il suoi parametri nel seguente formato
+```cpp
+datype nome(dataypeArgomento argomento1, dataypeArgomento argomento2){
+	//codice della funzione
+}
+```
+
+analizziamo ora i singoli elementi:
+		- **datatype**: indica il datatype del valore che la funzione restituisce
+		- **nome**: indica il nome della funzione, che gli dà un'identità e serve a chiamare quest'ultima.
+		- **parametri**: sono contenuti all'interno delle parentesi adiacenti al nome e sono dei valore da passare alla funzione quando questa viene invocata, servono ad eseguire le operazioni nel codice che è contenuto nella funzione, ma sarà tutto più chiaro appena faremo un esempio.
+un'esempio quindi di una firma di una funzione che restituisce la somma di due numeri potrebbe essere il seguente:
+```cpp
+int somma(int num1, int num2){
+	//codice della funzione
+}
+```
+Il **codice** all'interno delle parentesi graffe della funzione è uguale a qualsiasi codice scritto fin'ora utilizzando semplicemente la funzione main() utilizzando un approccio procedurale. Le uniche due cose per le quali può differire sono le seguenti:
+- Si possono usare i parametri della funzione, ad esempio il codice contenuto nell'esempio precedente potrebbe usare `int somma = num1 + num2 ` 
+- Si può usare la parola chiave `return` che permette di **restituire** un valore. Ciò significa che se ad esempio creo una funzione `somma(par1, par2)` che dà come risultato 2, e creo una variabile `risultato` e gli do valore `risultato = somma(par1, par2)`, allora `risultato` avrà valore 2. Oppure potrei stampare l'output della funzione scrivendo `cout << somma(par1, par2) << endl`, in questo modo stamperò in console `2`.
+Vediamo ora un esempio di funzione che restituisce la **somma** tra due numeri:
+```cpp
+#include <iostream>
+int somma(int num1, int num2){
+    int ris = num1 + num2;
+	return ris;
+}
+int main() {
+    int risultato = somma(1,2);
+    std::cout << risultato << std::endl;
+}
+```
+
+
 **Il seguente testo NON riguarda il programma di SECONDA superiore**
 
 # Stringhe in c++
