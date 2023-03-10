@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "67db2df722beec95",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nota ",
+                "query": " ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -164,6 +151,9 @@
       "publish:Pubblica modifiche": false
     }
   },
-  "active": "67db2df722beec95",
-  "lastOpenFiles": []
+  "active": "b11949c5d966b1e0",
+  "lastOpenFiles": [
+    "Senza nome.canvas",
+    "README.md"
+  ]
 }
