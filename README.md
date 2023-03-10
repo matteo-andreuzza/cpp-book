@@ -1,6 +1,8 @@
 # Basi di c++
 di Matteo Andreuzza
 ###### Indice
+- [Basi di c++](#basi-di-c--)
+          + [Indice](#indice)
 - [Basi di C++](#basi-di-c--)
   * [Variabili e costanti](#variabili-e-costanti)
   * [Funzioni di base di iostream:](#funzioni-di-base-di-iostream-)
@@ -24,6 +26,7 @@ di Matteo Andreuzza
     + [L'array nel codice c++](#l-array-nel-codice-c--)
       - [Usare gli arrays:](#usare-gli-arrays-)
   * [Matrici](#matrici)
+- [Funzioni in c++](#funzioni-in-c--)
 - [Stringhe in c++](#stringhe-in-c--)
   * [Gestione delle stringhe](#gestione-delle-stringhe)
   * [inserimento di caratteri nelle stringhe](#inserimento-di-caratteri-nelle-stringhe)
