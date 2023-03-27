@@ -6,9 +6,32 @@
       {
         "id": "428504a044837e48",
         "type": "tabs",
+        "dimension": 69.73180076628353,
         "children": [
           {
             "id": "b11949c5d966b1e0",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "mappa.canvas",
+                "viewState": {
+                  "x": 140,
+                  "y": 90,
+                  "zoom": -2.3945804742873293
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ec38925d6eb36655",
+        "type": "tabs",
+        "dimension": 30.268199233716476,
+        "children": [
+          {
+            "id": "fe84501e6290f864",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -85,7 +108,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +124,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +145,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -134,11 +153,10 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
-      "canvas:Crea nuova lavagna": false,
       "switcher:Apri selezione rapida": false,
       "graph:Apri vista grafo": false,
       "daily-notes:Apri nota del giorno": false,
@@ -148,12 +166,36 @@
       "zk-prefixer:Nuova nota univoca": false,
       "audio-recorder:Avvia/ferma registrazione": false,
       "workspaces:Gestisci layout delle aree di lavoro": false,
-      "publish:Pubblica modifiche": false
+      "publish:Pubblica modifiche": false,
+      "canvas:Crea nuova lavagna": false
     }
   },
-  "active": "b11949c5d966b1e0",
+  "active": "47e3726e2a6de9f5",
   "lastOpenFiles": [
-    "Senza nome.canvas",
-    "README.md"
+    "mappa.canvas",
+    "Senza nome.md",
+    "vettori.md",
+    "README.md",
+    "costrutti complessi/Costrutti complessi in C++.md",
+    "cicli/istruzioni utili nei cicli/istruzione continue.md",
+    "cicli/istruzioni utili nei cicli/istruzione break.md",
+    "cicli/istruzioni utili nei cicli/istruzioni utili nei cicli.md",
+    "cicli/istruzioni utili nei cicli",
+    "cicli/ciclo Do-while.md",
+    "cicli/cicli.md",
+    "cicli/ciclo for.md",
+    "cicli/ciclo while.md",
+    "cicli",
+    "costrutti complessi/selezione semplice.md",
+    "costrutti complessi/gli operatori logici.md",
+    "costrutti complessi/selezione annidata.md",
+    "operatori di selezione.md",
+    "costrutti complessi",
+    "Basi/Basi di c++.md",
+    "Basi/Funzione principale.md",
+    "Basi/Operazioni matematiche.md",
+    "Basi/Funzioni base di Iostream.md",
+    "Basi/Variabili e costanti.md",
+    "Basi"
   ]
 }

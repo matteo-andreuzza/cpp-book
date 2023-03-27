@@ -3,7 +3,7 @@ di Matteo Andreuzza
 ###### Indice
 - [Basi di c++](#basi-di-c++)
           + [Indice](#indice)
-- [Basi di C++](#basi-di-c++)
+- [Basi di C++](#basi-di-c++) ^1e9c07
   * [Variabili e costanti](#variabili-e-costanti)
   * [Funzioni di base di iostream:](#funzioni-di-base-di-iostream-)
   * [Operazioni matematiche:](#operazioni-matematiche-)
@@ -22,7 +22,7 @@ di Matteo Andreuzza
     + [Istruzione continue](#istruzione-continue)
 - [Librerie e funzioni esterne](#librerie-e-funzioni-esterne)
 - [Arrays in C++](#arrays-in-c++)
-  * [Vettori](#vettori)
+  * [Vettori](#vettori) ^28fe5b
     + [L'array nel codice c++](#l-array-nel-codice-c++)
       - [Usare gli arrays:](#usare-gli-arrays-)
   * [Matrici](#matrici)
@@ -32,7 +32,7 @@ di Matteo Andreuzza
   * [inserimento di caratteri nelle stringhe](#inserimento-di-caratteri-nelle-stringhe)
   * [matrici di stringhe](#matrici-di-stringhe)
 
-# Basi di C++
+# le basi di C++
 ## Variabili e costanti
 Per contenere dei valori utilizziamo variabili e costanti:
 - variabili per contenere un valore che **può variare**
@@ -522,6 +522,8 @@ int main(){
 
 
 # Arrays in C++
+
+
 In c++, come in ogni linguaggio di programmazione che li supporta, gli arrays servono ad immagazzinare più elementi all'interno di una variabile. 
 Ci sono due tipi di arrays, i vettori e le matrici. Vediamo ora i Vettori.
 ## Vettori
@@ -530,7 +532,7 @@ Detti anche array monodimensionali, sono caratterizzati da:
 - La lunghezza dell'array
 - Gli elementi che contiene
 - Gli indici degli elementi
-Questa rappresentazione ci aiuta a capire la struttura dell'array:
+Questa rappresentazione ci aiuta a capire la struttura dell'array:]
 ![[Array1.jpg]]
 Un array è costituito da delle "caselle" immaginarie. Queste caselle devono essere tante quante la lunghezza dell'array (nell'immagine: Array lenght). Ad ogni "casella" è assegnato un numero che la rappresenta, questo numero è chiamato indice.
 > **Nota bene**
