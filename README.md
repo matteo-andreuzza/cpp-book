@@ -1,19 +1,20 @@
 # Basi di c++
 di Matteo Andreuzza
 ###### Indice
-- [Basi di c++](#basi-di-c++)
+- [Basi di c++](#basi-di-c--)
           + [Indice](#indice)
-- [Basi di C++](#basi-di-c++) ^1e9c07
+- [le basi di C++](#le-basi-di-c--)
   * [Variabili e costanti](#variabili-e-costanti)
   * [Funzioni di base di iostream:](#funzioni-di-base-di-iostream-)
   * [Operazioni matematiche:](#operazioni-matematiche-)
   * [Funzione principale](#funzione-principale)
-- [Costrutti complessi in C++ (1)](#costrutti-complessi-in-c++--1-)
+- [Costrutti complessi in C++ (1)](#costrutti-complessi-in-c----1-)
   * [Operatori di selezione](#operatori-di-selezione)
     + [Selezione semplice](#selezione-semplice)
     + [Selezione annidata](#selezione-annidata)
   * [Gli operatori logici](#gli-operatori-logici)
-- [Cicli in C++](#cicli-in-c++)
+  * [lo switch case](#lo-switch-case)
+- [Cicli in C++](#cicli-in-c--)
   * [Ciclo While](#ciclo-while)
   * [Ciclo Do - While](#ciclo-do---while)
   * [Ciclo For](#ciclo-for)
@@ -21,17 +22,16 @@ di Matteo Andreuzza
     + [istruzione break](#istruzione-break)
     + [Istruzione continue](#istruzione-continue)
 - [Librerie e funzioni esterne](#librerie-e-funzioni-esterne)
-- [Arrays in C++](#arrays-in-c++)
-  * [Vettori](#vettori) ^28fe5b
-    + [L'array nel codice c++](#l-array-nel-codice-c++)
+- [Arrays in C++](#arrays-in-c--)
+  * [Vettori](#vettori)
+    + [L'array nel codice c++](#l-array-nel-codice-c--)
       - [Usare gli arrays:](#usare-gli-arrays-)
   * [Matrici](#matrici)
-- [Funzioni in c++](#funzioni-in-c++)
-- [Stringhe in c++](#stringhe-in-c++)
+- [Funzioni in c++](#funzioni-in-c--)
+- [Stringhe in c++](#stringhe-in-c--)
   * [Gestione delle stringhe](#gestione-delle-stringhe)
   * [inserimento di caratteri nelle stringhe](#inserimento-di-caratteri-nelle-stringhe)
   * [matrici di stringhe](#matrici-di-stringhe)
-
 # le basi di C++
 ## Variabili e costanti
 Per contenere dei valori utilizziamo variabili e costanti:
@@ -268,6 +268,74 @@ if(colore palle == 'G' && colore_palle2 == 'R'){
 	cout << "Compro le palle" << endl;
 }
 ```
+
+
+## lo switch case
+Nel linguaggio di programmazione C++, lo statement `switch case` è una costruzione che consente di selezionare una delle varie alternative basandosi sul valore di una singola espressione,  senza utilizzare molteplici `if`  È particolarmente utile quando si devono prendere decisioni basate su un numero finito di possibili valori o casi.
+
+La sintassi generale dello statement `switch case` è la seguente:
+
+```cpp
+switch (espressione) {
+    case valore1:
+        // istruzioni da eseguire se l'espressione è uguale a valore1
+        break;
+    case valore2:
+        // istruzioni da eseguire se l'espressione è uguale a valore2
+        break;
+    // altri casi possibili...
+    default:
+        // istruzioni da eseguire se nessun caso corrisponde all'espressione
+        break;
+}
+```
+
+Vediamo ora come funziona lo statement `switch case` nel dettaglio:
+
+1. L'espressione posta tra le parentesi tonde dopo la parola chiave `switch` viene valutata.
+2. L'espressione viene confrontata con i valori specificati dopo ogni parola chiave `case`.
+3. Se il valore dell'espressione corrisponde a uno dei valori specificati, vengono eseguite le istruzioni all'interno del blocco di codice corrispondente a quel caso.
+4. Dopo l'esecuzione delle istruzioni relative al caso corrispondente, viene utilizzata la parola chiave `break` per uscire dallo statement `switch case` e proseguire con il codice successivo.
+5. Se non viene trovato nessun caso corrispondente al valore dell'espressione, viene eseguito il blocco di codice associato alla parola chiave `default` (che è facoltativo). Anche in questo caso, l'utilizzo di `break` è consigliato per evitare l'esecuzione dei blocchi di codice dei casi successivi.
+6. Alla fine dello statement `switch case`, il programma continua l'esecuzione dal punto successivo al blocco `switch`.
+
+Ecco un esempio di utilizzo dello statement `switch case`:
+
+```cpp
+#include <iostream>
+
+int main() {
+    int numero = 2;
+
+    switch (numero) {
+        case 1:
+            std::cout << "Il numero è 1" << std::endl;
+            break;
+        case 2:
+            std::cout << "Il numero è 2" << std::endl;
+            break;
+        case 3:
+            std::cout << "Il numero è 3" << std::endl;
+            break;
+        default:
+            std::cout << "Il numero non è né 1, né 2, né 3" << std::endl;
+            break;
+    }
+
+    return 0;
+}
+```
+
+In questo esempio, l'espressione `numero` viene confrontata con i vari casi. Poiché il valore di `numero` è 2, verrà eseguito il blocco di codice associato al caso `2`. Pertanto, l'output sarà:
+
+```
+Il numero è 2
+```
+
+È importante notare che il tipo di dato dell'espressione utilizzata nello statement `switch case` può essere qualsiasi tipo intero o carattere, come `int`, `char` o `enum`. Inoltre, i casi possono essere specificati in qualsiasi ordine e possono anche essere valori costanti o variabili. Tuttavia, non è possibile utilizzare tipi di dati float o double nelle espressioni dello `switch case`.
+
+È inoltre possibile includere più istruzioni all'interno di ciascun caso.
+
 
 # Cicli in C++
 In c++, come in ogni altro linguaggio di programmazione, i cicli sono dei costrutti che servono a ripetere delle istruzioni per un numero di volte, in base alla veridicità di una condizione.
