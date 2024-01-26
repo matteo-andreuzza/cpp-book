@@ -174,12 +174,12 @@ _Se avrò dei figli, se questi avranno dei figli allora sarò nonna, altimenti, 
 Applichiamo una subordinazione grafica alla frase per comprenderla meglio:
 
 _Se avrò dei figli_
-	 &#8192 _se questi avranno figli_
-	 &#8192&#8192	_sarò nonna
-	 &#8192 se non avranno figli_
-	 	&#8192&#8192_rimarrò madre
+		  _se questi avranno figli_
+		 	_sarò nonna
+		 se non avranno figli_
+		 	rimarrò madre
 Se non avrò figli
-	&#8192rimarrò sola._
+	rimarrò sola._
 
 Paragoniamo ancora una volta con un linguaggio di programmazione:
 
