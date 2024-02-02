@@ -358,9 +358,9 @@ while(condizione){
 Facciamo un esempio pratico:
 
 ``` cpp
-int a = 5;
+int a = 0;
 
-while(a > 0){
+while(a < 10){
 	cout<<"Il ciclo è in funzione. Giro numero " << a << endl;
 	a++;
 }

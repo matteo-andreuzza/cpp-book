@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "75c97b4c4f564a52",
@@ -163,8 +162,9 @@
   },
   "active": "b11949c5d966b1e0",
   "lastOpenFiles": [
-    "mappa.canvas",
+    "202402022217.md",
     "README.md",
+    "mappa.canvas",
     "Senza nome.md",
     "vettori.md",
     "costrutti complessi/Costrutti complessi in C++.md",
